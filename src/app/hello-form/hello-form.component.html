@@ -1,0 +1,17 @@
+<p>hello-form works!</p>
+<div>
+  <h2>Hero list</h2>
+  <ul>
+    <li *ngFor="let hero of heros">
+      <img src="{{ hero.img }}" alt="{{ hero.name}}">
+      {{ hero.name }}
+    </li>
+  </ul>
+</div>
+<div>
+  <div>Name <input type="text" [(ngModel)]="name"></div>
+  <div>Image <input type="text" [(ngModel)]="img"></div>
+  <div>
+    <input type="button" value="Submit" (click)="doSubmit()">
+  </div>
+</div>
